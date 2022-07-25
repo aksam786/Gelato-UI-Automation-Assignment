@@ -17,10 +17,9 @@ class GooglePage{
 
     async clickSearchButton(){
         try {
-            await this.page.waitForSelector(locators.searchButton.css);
-            await this.page.waitForTimeout(5000)
-            await expect(await this.page.locator(locators.searchButton.css).last()).toBeVisible();
-            await this.page.locator(locators.searchButton.css).last().click();
+            await this.page.waitForSelector(locators.searchButton.xpath);
+            await expect(await this.page.locator(locators.searchButton.xpath)).toBeVisible();
+            await this.page.locator(locators.searchButton.xpath).click({force: true});
         } catch (error) {
             throw new Error("Error during clicking search button" + error)
         }
@@ -28,7 +27,6 @@ class GooglePage{
 
     async verifySearchedResult(){
         try {
-            await expect(await this.page.locator(locators.searchedItem.css)).toBeVisible();
             await this.page.locator(locators.searchedItem.css).click();
             await this.page.waitForTimeout(5000);
             await expect(await this.page).toHaveURL('https://www.amazon.com/')

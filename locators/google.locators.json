@@ -3,7 +3,7 @@
         "css": "input[title='Search']"
     },
     "searchButton": {
-        "css": "input[value='Google Search']"
+        "xpath": "(//input[@value='Google Search'])[2]"
     },
     "searchedItem": {
         "css": "a[href='https://www.amazon.com/']"
