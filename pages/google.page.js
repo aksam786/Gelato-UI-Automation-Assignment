@@ -80,8 +80,6 @@ class GooglePage{
     async openImage(){
         try {
             await this.page.locator(locators.searchedImage.xpath).click();
-            await this.page.waitForTimeout(3000);
-            await expect(await this.page.locator('//div[text()="LinkedIn"]')).toBeVisible();
         } catch (error) {
             throw new Error("Error during clicking Images Button" + error)
         }
