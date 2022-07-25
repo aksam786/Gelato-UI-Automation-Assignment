@@ -17,6 +17,8 @@ class GooglePage{
 
     async clickSearchButton(){
         try {
+            await this.page.waitForSelector(locators.searchButton.css);
+            await this.page.waitForTimeout(5000)
             await expect(await this.page.locator(locators.searchButton.css).last()).toBeVisible();
             await this.page.locator(locators.searchButton.css).last().click();
         } catch (error) {
@@ -39,7 +41,7 @@ class GooglePage{
         try {
             await expect(await this.page.locator(locators.feelingLuckyButton.css).last()).toBeVisible();
             await this.page.locator(locators.feelingLuckyButton.css).last().click();
-            await this.page.waitForTimeout(3000);
+            await this.page.waitForTimeout(8000);
             await expect(await this.page).toHaveURL('https://www.google.com/doodles')
         } catch (error) {
             throw new Error("Error during clicking feeling lucky button" + error)
