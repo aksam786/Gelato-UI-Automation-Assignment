@@ -1,0 +1,47 @@
+{
+    "searchField": {
+        "css": "input[title='Search']"
+    },
+    "searchButton": {
+        "css": "input[value='Google Search']"
+    },
+    "searchedItem": {
+        "css": "a[href='https://www.amazon.com/']"
+    },
+    "feelingLuckyButton": {
+        "css": "input[name='btnI']"
+    },
+    "selectedDoodle": {
+        "xpath": "(//a[@href='/doodles/lydia-tin-ha-sums-77th-birthday'])[2]"
+    },
+    "ImagesButton":{
+        "xpath": "//a[text()='Images']"
+    },
+    "searchImageButton":{
+        "css": "[aria-label='Google Search']"
+    },
+    "searchedImage": {
+        "xpath": "//div[@class='islrc']/div[1]/a[1]"
+    },
+    "seachedImageUrl":{
+        "css": "a[href='https://no.linkedin.com/company/gelato']"
+    },
+    "googleAppsButton":{
+        "css": "a[aria-label='Google apps']"
+    },
+    "googleEarth":{
+        "css": "a[href='https://earth.google.com/web/']"
+    },
+    "gmailSignInButton":{
+        "css": "//a[text()='Sign in']"
+    },
+    "email": {
+        "css": "input[type='email']"
+    },
+    "nextButton":{
+        "xpath": "//button/div/following-sibling::span[text()='Next']"
+    },
+    "password":{
+        "css": "[type='password']"
+    }
+}
